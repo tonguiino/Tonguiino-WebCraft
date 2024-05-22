@@ -9,7 +9,7 @@ const Button = ({ text }) => {
 
 const Home = () => {
     return (
-        <section id="AboutMe">
+        <section className="home" id="home">
             <div className="profile-info">
                 <h1>Desarrollador Web</h1>
                 <h2>Ey, soy Santiago Tonguino</h2>
