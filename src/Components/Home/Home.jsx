@@ -1,4 +1,4 @@
-import "./AboutUs.scss"
+import "./Home.scss"
 import profileImage from "../../assets/img/FotoPerfilSantiagoTonguino.jpg"
 
 const Button = ({ text }) => {
@@ -7,7 +7,7 @@ const Button = ({ text }) => {
     )
 }
 
-const AboutUs = () => {
+const Home = () => {
     return (
         <section id="AboutMe">
             <div className="profile-info">
@@ -29,4 +29,4 @@ const AboutUs = () => {
 
     )
 }
-export default AboutUs
+export default Home
