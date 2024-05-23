@@ -9,10 +9,10 @@
     },
     {
         "path": "#AboutMe",
-        "name": "AboutMe"
+        "name": "Sobre mí"
     },
     {
         "path": "/",
-        "name": "ejemplo"
+        "name": "Contactame"
     }
 ]
