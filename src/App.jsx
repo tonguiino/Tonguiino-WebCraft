@@ -4,6 +4,7 @@ import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import AboutMe from './Components/AboutMe/AboutMe'
 import Contac from './Components/Contac/Contac'
+import Skills from './Components/Skills/Skills'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <main>
         <Home />
+        <Skills/>
         <AboutMe />
         <Contac />
       </main>
