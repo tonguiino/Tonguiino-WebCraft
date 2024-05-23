@@ -12,22 +12,28 @@
     background: radial-gradient(circle, rgba(20, 19, 59, 1) 0%, rgba(2, 0, 36, 1) 94%, rgba(2, 0, 36, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#14133b", endColorstr="#020024", GradientType=1);
     justify-content: center;
+
     main {
       display: flex;
       flex-direction: column;
-
       align-items: center;
     }
 
-    button{
-        padding: 10px;
-        border: none;
-        font-weight: 700;
-        border-radius: 25px;
-        color: var(--black);
-        cursor: pointer;
+    section {
+      width: 70em;
+      padding: 15px;
     }
-    img{
+
+    button {
+      padding: 10px;
+      border: none;
+      font-weight: 700;
+      border-radius: 25px;
+      color: var(--black);
+      cursor: pointer;
+    }
+
+    img {
       width: 100px;
       height: 100px;
     }

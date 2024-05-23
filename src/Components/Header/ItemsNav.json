@@ -1,15 +1,15 @@
 [
     {
+        "path": "#Home",
+        "name": "Home"
+    },
+    {
+        "path": "/",
+        "name": "ejemplo"
+    },
+    {
         "path": "#AboutMe",
-        "name": "Sobre mí"
-    },
-    {
-        "path": "/",
-        "name": "ejemplo"
-    },
-    {
-        "path": "/",
-        "name": "ejemplo"
+        "name": "AboutMe"
     },
     {
         "path": "/",
