@@ -10,7 +10,22 @@ const Skills = () => {
                 </p>
             </div>
             <div className="skills-box">
-                
+                <div className="skills-box-square">
+                    <div className="skills-box-square-tittle">
+                        <h2>Tecnologias</h2>
+                    </div>
+                    <div className="skills-box-square-info">
+
+                    </div>
+                </div>
+                <div className="skills-box-square">
+                    <div className="skills-box-square-tittle">
+                        <h2>Herramientas</h2>
+                    </div>
+                    <div className="skills-box-square-info">
+
+                    </div>
+                </div>
             </div>
         </section>
 
