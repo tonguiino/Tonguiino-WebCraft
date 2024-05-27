@@ -2,7 +2,7 @@ import "./Skills.scss"
 
 const Skills = () => {
     return (
-        <section className="skills">
+        <section className="skills" id="skills">
             <div>
                 <h2>Habilidades</h2>
                 <p>
@@ -15,7 +15,10 @@ const Skills = () => {
                         <h2>Tecnologias</h2>
                     </div>
                     <div className="skills-box-square-info">
-
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
                     </div>
                 </div>
                 <div className="skills-box-square">
@@ -23,7 +26,10 @@ const Skills = () => {
                         <h2>Herramientas</h2>
                     </div>
                     <div className="skills-box-square-info">
-
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
                     </div>
                 </div>
             </div>

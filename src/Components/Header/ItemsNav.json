@@ -4,8 +4,8 @@
         "name": "Home"
     },
     {
-        "path": "/",
-        "name": "ejemplo"
+        "path": "#skills",
+        "name": "Habilidades"
     },
     {
         "path": "#AboutMe",
