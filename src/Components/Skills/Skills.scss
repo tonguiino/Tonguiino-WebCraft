@@ -34,9 +34,20 @@ section.skills {
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
                 justify-items: center;
-                align-content: center;
+                align-items: center;
+                    
+                img{
 
+                    &:hover{
+                        transform: scale(1.2);
+                        transition: transform 0.2s ease-in-out;
+                    }
+                }
             }
         }
     }
+}
+
+@media screen {
+    
 }

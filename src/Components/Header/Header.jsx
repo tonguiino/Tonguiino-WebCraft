@@ -8,7 +8,7 @@ const Header = () => {
                 <ul>
                     {ItemsNav.map((item, index) => {
                         return (
-                            <li key={index}><a href={item.path}>{item.name}</a></li>
+                            <li className="list-item" key={index}><a href={item.path}>{item.name}</a></li>
                         )
                     })}
                 </ul>
