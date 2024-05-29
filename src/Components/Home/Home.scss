@@ -25,14 +25,16 @@ section.home {
         button {
             margin-right: 20px;
 
-            &:hover{
+            &:hover {
                 background-color: var(--black);
                 color: var(--white);
-                a{
-                    color: var(--yellow) ;
+
+                a {
+                    color: var(--yellow);
                 }
             }
-            a{ 
+
+            a {
                 color: var(--black)
             }
         }
