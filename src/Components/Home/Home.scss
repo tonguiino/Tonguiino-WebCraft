@@ -15,7 +15,8 @@ section.home {
     }
 
     p {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+        text-align: justify;
     }
 
     .profile-info {
@@ -28,7 +29,7 @@ section.home {
                 background-color: var(--black);
                 color: var(--white);
                 a{
-                    color: var(--white) ;
+                    color: var(--yellow) ;
                 }
             }
             a{ 

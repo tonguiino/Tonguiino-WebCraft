@@ -16,8 +16,7 @@ const Skills = () => {
             <div>
                 <h2>Habilidades</h2>
                 <p>
-                    A continuacion podran ver las tecnologias que actualmente se utilizar y estoy aprendiendo
-                </p>
+                A continuación, podrán ver las tecnologías y herramientas que manejo actualmente y en las que estoy en constante aprendizaje y evolución. Mi pasión por el desarrollo me impulsa a aprender y perfeccionar continuamente mis habilidades, asegurando que pueda ofrecer lo mejor en cada proyecto que emprendo.</p>
             </div>
             <div className="skills-box">
                 <div className="skills-box-square">
