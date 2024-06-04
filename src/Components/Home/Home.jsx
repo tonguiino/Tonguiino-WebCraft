@@ -1,6 +1,7 @@
 import "./Home.scss"
 import profileImage from "../../assets/img/FotoPerfilSantiagoTonguino.jpg"
 
+
 const Button = ({ text }) => {
     return (
         <button>{text}</button>

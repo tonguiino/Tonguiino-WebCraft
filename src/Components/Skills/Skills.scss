@@ -5,7 +5,14 @@ section.skills {
     justify-content: center;
     height: 560px;
 
+    h2 {
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
     p {
+        width: 643px;
+        text-align: justify;
         margin-bottom: 60px;
     }
 
@@ -35,10 +42,11 @@ section.skills {
                 grid-template-rows: 1fr 1fr;
                 justify-items: center;
                 align-items: center;
-                    
-                img{
 
-                    &:hover{
+                img {
+filter: drop-shadow(0px 0px 10px  rgba(0,0,0,8));
+
+                    &:hover {
                         transform: scale(1.2);
                         transition: transform 0.2s ease-in-out;
                     }
@@ -48,6 +56,4 @@ section.skills {
     }
 }
 
-@media screen {
-    
-}
+@media screen {}
