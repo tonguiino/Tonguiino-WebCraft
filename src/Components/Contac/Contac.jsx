@@ -3,7 +3,7 @@ const Contac = () => {
     return (
         <section className="Contac" id="Contac">
             <div className="contac-Container">
-                <div>
+                <div className="contact-info">
                     <h2>Contactame</h2>
                     <p>Si tienes alguna oferta, propuesta de negocio, o simplemente quieres conectarte, no dudes en contactarme a través de mis redes sociales. Para una respuesta más rápida, puedes enviarme un correo electrónico a santiagotq2@gmail.com. ¡Estaré encantado de saber de ti y responder lo antes posible!
                     </p>

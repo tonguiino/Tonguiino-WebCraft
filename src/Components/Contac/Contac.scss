@@ -2,11 +2,14 @@
     display: flex;
     justify-content: flex-start;
 
-
+.contact-info{
+    width: 32em;
+}
 
     .contac-nav {
         display: flex;
-
+        flex-direction: column;
+        gap: 13px;
         .button {
             cursor: pointer;
             width: 50px;
