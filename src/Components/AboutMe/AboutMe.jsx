@@ -1,4 +1,5 @@
 import "./AboutMe.scss"
+import AboutUSImg from "../../assets/img/Santiago_Tonguino.webp"
 
 
 const AboutMe = () => {
@@ -16,6 +17,11 @@ const AboutMe = () => {
                 <p>
                     Mi pasión por la tecnología y el diseño me impulsa a mantenerme actualizado con las últimas tendencias y herramientas en el campo del desarrollo web. Soy un colaborador entusiasta y comprometido, siempre dispuesto a enfrentar nuevos desafíos y aprender de ellos.
                 </p>
+            </div>
+            <div class="card">
+                <div class="card-info">
+                    <p class="title">Magic Card</p>
+                </div>
             </div>
             <div>
 
