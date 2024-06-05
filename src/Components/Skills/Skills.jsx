@@ -21,7 +21,7 @@ const Skills = () => {
             <div className="skills-box">
                 <div className="skills-box-square">
                     <div className="skills-box-square-tittle">
-                        <h2>Tecnologias</h2>
+                        <h2>Tecnologías</h2>
                     </div>
                     <div className="skills-box-square-info">
                         <img src={htmlImg} alt="" />
