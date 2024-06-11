@@ -13,7 +13,7 @@ import npmImg from "../../assets/img/npm_logo.png"
 const Skills = () => {
     return (
         <section className="skills" id="skills">
-            <div>
+            <div className="skills-info">
                 <h2>Habilidades</h2>
                 <p>
                 A continuación, podrán ver las tecnologías y herramientas que manejo actualmente y en las que estoy en constante aprendizaje y evolución. Mi pasión por el desarrollo me impulsa a aprender y perfeccionar continuamente mis habilidades, asegurando que pueda ofrecer lo mejor en cada proyecto que emprendo.</p>
