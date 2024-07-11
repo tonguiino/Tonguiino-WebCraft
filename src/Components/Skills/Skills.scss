@@ -1,97 +1,113 @@
-section.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: auto; /* Ajusta la altura automáticamente según el contenido */
-    padding: 20px; /* Añade padding para asegurar que el contenido no toque los bordes */
 
-    .skills-info {
-        text-align: center; /* Centra el texto dentro de .skills-info */
-        padding: 0 15px; /* Añade padding a los lados para que el contenido no toque los bordes */
-        h2 {
-            text-align: center;
-            margin-bottom: 18px;
-        }
 
-        p {
- /* Ajusta el ancho al 100% del contenedor */
-            max-width: 643px; /* Limita el ancho máximo */
-            text-align: justify;
-            margin-bottom: 60px;
-        }
-    }
 
-    .skills-box {
-        display: flex;
-        flex-wrap: wrap; /* Permite que los elementos se ajusten y envuelvan */
-        justify-content: center; /* Centra los elementos en el contenedor */
-        width: 100%; /* Ajusta el ancho al 100% del contenedor */
-        max-width: 65em; /* Limita el ancho máximo */
-        height: auto; /* Ajusta la altura automáticamente según el contenido */
 
-        .skills-box-square {
-            width: 100%; /* Ajusta el ancho al 100% del contenedor */
-            max-width: 25em; /* Limita el ancho máximo */
-            height: auto; /* Ajusta la altura automáticamente según el contenido */
-            margin: 10px; /* Añade margen para espaciar los elementos */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
 
-            .skills-box-square-info {
-                width: 100%; /* Ajusta el ancho al 100% del contenedor */
-                max-width: 400px; /* Limita el ancho máximo */
-                height: 250px; /* Ajusta la altura automáticamente según el contenido */
-                background-color: rgba(240, 248, 255, 0.412);
-                border-radius: 20px;
-                padding: 15px;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                justify-items: center;
-                align-items: center;
 
-                img {
-                    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
 
-                    &:hover {
-                        transform: scale(1.2);
-                        transition: transform 0.2s ease-in-out;
-                    }
-                }
-            }
-        }
-    }
-}
 
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .skills-box {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center; /* Alinea los elementos al centro */
-    }
 
-    .skills-box-square {
-        width: 100%; /* Ajusta el ancho al 100% del contenedor */
-        margin: 10px 0; /* Añade margen vertical para espaciar los elementos */
-    }
 
-    .skills-box-square-info {
-        grid-template-columns: 1fr 1fr; /* Cambia el layout de grid a 2 columnas */
-        grid-template-rows: auto; /* Ajusta las filas automáticamente */
-    }
-}
 
-@media (max-width: 480px) {
-    .skills-info p {
- /* Ajusta el ancho al 100% del contenedor */
-        margin-bottom: 30px; /* Ajusta el margen inferior */
-    }
 
-    .skills-box-square-info {
-        grid-template-columns: 1fr; /* Cambia el layout de grid a 1 columna */
-        grid-template-rows: auto; /* Ajusta las filas automáticamente */
-    }
-}
+
+
+
+
+// section.skills {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     height: auto; /* Ajusta la altura automáticamente según el contenido */
+//     padding: 20px; /* Añade padding para asegurar que el contenido no toque los bordes */
+
+//     .skills-info {
+//         text-align: center; /* Centra el texto dentro de .skills-info */
+//         padding: 0 15px; /* Añade padding a los lados para que el contenido no toque los bordes */
+//         h2 {
+//             text-align: center;
+//             margin-bottom: 18px;
+//         }
+
+//         p {
+//  /* Ajusta el ancho al 100% del contenedor */
+//             max-width: 643px; /* Limita el ancho máximo */
+//             text-align: justify;
+//             margin-bottom: 60px;
+//         }
+//     }
+
+//     .skills-box {
+//         display: flex;
+//         flex-wrap: wrap; /* Permite que los elementos se ajusten y envuelvan */
+//         justify-content: center; /* Centra los elementos en el contenedor */
+//         width: 100%; /* Ajusta el ancho al 100% del contenedor */
+//         max-width: 65em; /* Limita el ancho máximo */
+//         height: auto; /* Ajusta la altura automáticamente según el contenido */
+
+//         .skills-box-square {
+//             width: 100%; /* Ajusta el ancho al 100% del contenedor */
+//             max-width: 25em; /* Limita el ancho máximo */
+//             height: auto; /* Ajusta la altura automáticamente según el contenido */
+//             margin: 10px; /* Añade margen para espaciar los elementos */
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             gap: 20px;
+
+//             .skills-box-square-info {
+//                 width: 100%; /* Ajusta el ancho al 100% del contenedor */
+//                 max-width: 400px; /* Limita el ancho máximo */
+//                 height: 250px; /* Ajusta la altura automáticamente según el contenido */
+//                 background-color: rgba(240, 248, 255, 0.412);
+//                 border-radius: 20px;
+//                 padding: 15px;
+//                 display: grid;
+//                 grid-template-columns: 1fr 1fr 1fr;
+//                 grid-template-rows: 1fr 1fr;
+//                 justify-items: center;
+//                 align-items: center;
+
+//                 img {
+//                     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+
+//                     &:hover {
+//                         transform: scale(1.2);
+//                         transition: transform 0.2s ease-in-out;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// /* Media Queries para pantallas más pequeñas */
+// @media (max-width: 768px) {
+//     .skills-box {
+//         flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+//         align-items: center; /* Alinea los elementos al centro */
+//     }
+
+//     .skills-box-square {
+//         width: 100%; /* Ajusta el ancho al 100% del contenedor */
+//         margin: 10px 0; /* Añade margen vertical para espaciar los elementos */
+//     }
+
+//     .skills-box-square-info {
+//         grid-template-columns: 1fr 1fr; /* Cambia el layout de grid a 2 columnas */
+//         grid-template-rows: auto; /* Ajusta las filas automáticamente */
+//     }
+// }
+
+// @media (max-width: 480px) {
+//     .skills-info p {
+//  /* Ajusta el ancho al 100% del contenedor */
+//         margin-bottom: 30px; /* Ajusta el margen inferior */
+//     }
+
+//     .skills-box-square-info {
+//         grid-template-columns: 1fr; /* Cambia el layout de grid a 1 columna */
+//         grid-template-rows: auto; /* Ajusta las filas automáticamente */
+//     }
+// }

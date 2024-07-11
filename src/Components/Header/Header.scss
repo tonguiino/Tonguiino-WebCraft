@@ -1,37 +1,14 @@
 header {
-position: sticky;
-top: 0;
-z-index: 10;
-    height: 60px;
-    backdrop-filter: blur(100px);
-
-
-    nav {
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
+    margin-top: 10px;
 
     ul {
         display: flex;
-        gap: 20px;
-        list-style: none;
+        flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
-
-        li {
-            &:hover {
-                transform: scale(1.2);
-            }
-
-            a:hover {
-                color: var(--yellow);
-
-            }
-        }
+        align-items: center;
+        gap:10px;
     }
+
 
 
 
