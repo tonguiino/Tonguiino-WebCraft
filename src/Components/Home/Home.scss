@@ -64,12 +64,14 @@ section.home {
 
     .profile-info {
         margin-top: 35px;
+
+        & *{margin: 18px 0px;}
     }
 
     .prodfile-info-button {
         display: flex;
         justify-content: space-around;
-        margin-top: 20px;
+        margin-top: 17px;
 
         
     }
