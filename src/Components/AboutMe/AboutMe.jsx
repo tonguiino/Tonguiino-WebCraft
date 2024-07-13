@@ -6,14 +6,10 @@ const AboutMe = () => {
     return (
 
         <section className="AboutMe" id="AboutMe">
-<div className="card">
-<img src={AboutUSImg} alt="" />
-</div>
-
-
-            <div className="AboutMe-Img">
-
+            <div className="card">
+                <img src={AboutUSImg} alt="" />
             </div>
+
             <div className="aboutMe-info">
                 <h2>Sobre mí</h2>
                 <p>Soy Santiago Tonguino, un Desarrollador Web especializado en la creación de sitios web atractivos y funcionales. Con un sólido dominio de las tecnologías clave en el desarrollo web, incluyendo HTML5, CSS, JavaScript, React y Sass. Además, cuento con conocimientos en WorldPress, PHP, SQL Server.
