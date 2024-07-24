@@ -1,10 +1,18 @@
+section.AboutMe {
 
-section.AboutMe{
-img{border-radius: 94px;
-    width: 9em;
-    height: 9em;
-    object-fit: cover;}
-    .aboutMe-info *{
+    .card {
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-radius: 94px;
+            width: 9em;
+            height: 9em;
+            object-fit: cover;
+        }
+    }
+
+    .aboutMe-info * {
         margin: 18px 0px;
     }
 
@@ -42,7 +50,7 @@ img{border-radius: 94px;
 //         cursor: pointer;
 //         color: white;
 //       }
-      
+
 //       .card::before {
 //         content: '';
 //         position: absolute;
@@ -57,7 +65,7 @@ img{border-radius: 94px;
 //         pointer-events: none;
 //         transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 //       }
-      
+
 //       .card::after {
 //         content: "";
 //         z-index: -1;
@@ -67,30 +75,30 @@ img{border-radius: 94px;
 //         transform: translate3d(0, 0, 0) scale(0.95);
 //         filter: blur(20px);
 //       }
-      
+
 //       .heading {
 //         font-size: 20px;
 //         text-transform: capitalize;
 //         font-weight: 700;
 //       }
-      
+
 //       .card p:not(.heading) {
 //         font-size: 14px;
 //       }
-      
+
 //       .card p:last-child {
 //         color: #e81cff;
 //         font-weight: 600;
 //       }
-      
+
 //       .card:hover::after {
 //         filter: blur(30px);
 
 
 //       }
-      
-      
-      
+
+
+
 
 //     .aboutMe-info {
 //         width: 43em;
