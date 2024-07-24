@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <section className="home" id="home">
             <div className="profile-img">
-                <div class="card">
+                <div className="card">
                     <img src={profileImage} alt="" />
                 </div>
 
