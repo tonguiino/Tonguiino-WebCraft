@@ -7,6 +7,10 @@ header {
         justify-content: center;
         align-items: center;
         gap:10px;
+
+        li a:hover{
+            color: var(--yellow);
+        }
     }
 
 
