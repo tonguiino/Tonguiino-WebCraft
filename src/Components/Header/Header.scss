@@ -6,14 +6,21 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap:10px;
+        gap: 10px;
 
-        li a:hover{
+        li a:hover {
             color: var(--yellow);
         }
     }
-
-
+    @media screen and (min-width:768px) {
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 35px
+        }
+    
+    }
 
 
 }
+
