@@ -12,16 +12,16 @@ header {
             color: var(--yellow);
         }
     }
+
     @media screen and (min-width:768px) {
         ul {
             display: flex;
             flex-direction: row;
             gap: 35px;
-            margin: 20px 0px 10px 0px  ;
+            margin: 20px 0px 10px 0px;
         }
-    
+
     }
 
 
 }
-
