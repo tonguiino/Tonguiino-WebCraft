@@ -84,7 +84,7 @@ section.home {
 
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @media screen and (min-width: 768px)  and (max-width: 1024px) {
 
         .prodfile-info-button {
             display: flex;
@@ -94,6 +94,15 @@ section.home {
 
     }
 
+    @media screen and (min-width: 1024px){
+
+        .prodfile-info-button {
+            display: flex;
+            justify-content: flex-start;
+            gap: 17px;
+        }
+
+    }
 
 
 }
