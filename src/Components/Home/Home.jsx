@@ -24,7 +24,7 @@ const Home = () => {
                     Mi dominio abarca las tecnologías esenciales como HTML5, CSS, JavaScript, React, Sass, WordlPress,
                     PHP y SQL server.</p>
                 <div className="prodfile-info-button">
-                    <Button text={'Descargar cv'} />
+                    <Button text={<a href="https://drive.google.com/file/d/1YbLPll2FqawjixDK6CVL53jcUcTSNcJY/view" target="_blank">Visita mi cv</a>} />
                     <Button text={<a href="https://www.linkedin.com/in/santiago-tonguino-quiceno-41a44b167/" target="_blank" >LinkedIn</a>} />
                 </div>
             </div>
