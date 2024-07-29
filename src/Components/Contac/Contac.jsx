@@ -4,7 +4,7 @@ const Contac = () => {
         <section className="Contac" id="Contac">
             <div className="contac-Container">
                 <div className="contact-info">
-                    <h2>Contactame</h2>
+                    <h2><span class="material-symbols-outlined">forward_to_inbox</span> Contactame</h2>
                     <p>Si tienes alguna oferta, propuesta de negocio, o simplemente quieres conectarte, no dudes en contactarme a través de mis redes sociales. Para una respuesta más rápida, puedes enviarme un correo electrónico a santiagotq2@gmail.com. ¡Estaré encantado de saber de ti y responder lo antes posible!
                     </p>
                 </div>

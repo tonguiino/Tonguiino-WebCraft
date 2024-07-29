@@ -23,65 +23,63 @@
         @media screen and (min-width: 768px) and (max-width: 1024px) {
           padding: 25px 10px;
         }
-        @media screen and (min-width: 1024px)  {
+
+        @media screen and (min-width: 1024px) {
           padding: 25px 10px;
           width: 60em;
         }
       }
     }
 
-    // main {
-    //   display: flex;
-    //   flex-direction: column;
-    //   align-items: center;
-    // }
-
+    span{font-size: 30px;}
     h2 {
       font-size: 30px;
     }
 
 
     button {
-        width: 130px;
-        height: 45px;
-        padding: 7px;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 2.5px;
-        font-weight: 500;
-        color: #000;
-        background-color: #fff;
-        border: none;
-        border-radius: 45px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-        outline: none;
+      width: 130px;
+      height: 45px;
+      padding: 7px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #000;
+      background-color: #fff;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      outline: none;
 
-        &:hover {
-            background-color: #3cc7fb;
-            box-shadow: 0px 5px 20px rgba(60, 199, 251, 0.4);
-            color: #fff;
-          
-          }
-          
-          &:active {
-            transform: translateY(3px);
-          }
-    }
-    }
+      &:hover {
+        background-color: #3cc7fb;
+        box-shadow: 0px 5px 20px rgba(60, 199, 251, 0.4);
+        color: #fff;
 
-    img {
-      width: 60px;
-      height: 60px;
-    }
+      }
 
-    a {
-      text-decoration: none;
-      color: var(--white);
-    }
-
-    ul li {
-      list-style: none;
+      &:active {
+        transform: translateY(3px);
+      }
     }
   }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+
+}
