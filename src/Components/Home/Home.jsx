@@ -13,7 +13,7 @@ const Home = () => {
         <section className="home" id="home">
             <div className="profile-img">
                 <div className="card">
-                    <img src={profileImage} alt="" />
+                    <img src={profileImage} alt="Fotografia de perfil Santiago Tonguino" title="Profile img"/>
                 </div>
 
             </div>
