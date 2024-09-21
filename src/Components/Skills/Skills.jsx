@@ -23,12 +23,12 @@ const Skills = () => {
                         <h2>Tecnologías</h2>
                     </div>
                     <div className="skills-box-square-info">
-                        <img src={htmlImg} alt="" />
-                        <img src={cssImg} alt="" />
-                        <img src={jsImg} alt="" />
-                        <img src={reactImg} alt="" />
-                        <img src={sassImg} alt="" />
-                        <img src={wordPressImg} alt="" />
+                        <img src={htmlImg} alt="Logo html" title="Logo html"/>
+                        <img src={cssImg} alt="Logo Css" title="Logo Css"/>
+                        <img src={jsImg} alt="Logo Javascript" title="Logo Javascript"/>
+                        <img src={reactImg} alt="Logo React" title="Logo React"/>
+                        <img src={sassImg} alt="Logo Sass" title="Logo Sass"/>
+                        <img src={wordPressImg} alt="Logo WordPreds" title="Logo WordPreds" />
                     </div>
                 </div>
                 <div className="skills-box-square">
@@ -36,10 +36,10 @@ const Skills = () => {
                         <h2>Herramientas</h2>
                     </div>
                     <div className="skills-box-square-info">
-                        <img src={visualCodeImg} alt="" />
-                        <img src={gitHubImg} alt="" />
-                        <img src={gitImg} alt="" />
-                        <img src={npmImg} alt="" />
+                        <img src={visualCodeImg} alt="Logo Visual Studio" title="Logo Visual Studio" />
+                        <img src={gitHubImg} alt="Logo Github" title="Logo Github" />
+                        <img src={gitImg} alt="Logo git" title="Logo git" />
+                        <img src={npmImg} alt="Logo npm" title="Logo npm" />
                     </div>
                 </div>
             </div>
