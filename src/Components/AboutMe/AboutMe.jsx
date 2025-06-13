@@ -11,7 +11,7 @@ const AboutMe = () => {
             </div>
 
             <div className="aboutMe-info">
-                <h2><span class="material-symbols-outlined">person_pin</span> Sobre mí</h2>
+                <h2><span className="material-symbols-outlined">person_pin</span> Sobre mí</h2>
                 <p>Soy Santiago Tonguino, un Desarrollador Web especializado en la creación de sitios web atractivos y funcionales. Con un sólido dominio de las tecnologías clave en el desarrollo web, incluyendo HTML5, CSS, JavaScript, React y Sass. Además, cuento con conocimientos en WorldPress, PHP, SQL Server.
 
                 </p>
