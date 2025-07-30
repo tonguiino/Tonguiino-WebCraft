@@ -5,6 +5,8 @@ import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Button = ({ text }) => {
     return (
         <button>{text}</button>
@@ -17,11 +19,11 @@ const Home = () => {
     // Efectos usados con gsap 
     useGSAP(() => {
         gsap.from(homeRef.current, {
-            Y: 100, //desplazamiento
+            y: 100, //desplazamiento
             opacity: 0, //opacidad
             duration: 4, //duracion
             ease: "bounce", //efecto 
-            ScrollTrigger: {
+            scrollTrigger: {
                 trigger: homeRef.current,
                 start: "top 80%", // Cuando el top del elemento llegue al 80% del viewport
                 toggleActions: "play none none none" // play cuando entra
