@@ -21,8 +21,8 @@ const Home = () => {
         gsap.from(homeRef.current, {
             y: 100, //desplazamiento
             opacity: 0, //opacidad
-            duration: 4, //duracion
-            ease: "bounce", //efecto 
+            duration: 2, //duracion
+            ease: "power4.out", //efecto 
             scrollTrigger: {
                 trigger: homeRef.current,
                 start: "top 80%", // Cuando el top del elemento llegue al 80% del viewport
