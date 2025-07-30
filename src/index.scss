@@ -22,16 +22,21 @@
 
         @media screen and (min-width: 768px) and (max-width: 1024px) {
           padding: 25px 10px;
+          height: auto;
         }
 
         @media screen and (min-width: 1024px) {
           padding: 25px 10px;
           width: 60em;
+        height: 100dvh;
         }
       }
     }
 
-    span{font-size: 30px;}
+    span {
+      font-size: 30px;
+    }
+
     h2 {
       font-size: 30px;
     }
