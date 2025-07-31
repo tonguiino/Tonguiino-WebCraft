@@ -12,6 +12,8 @@
     background: radial-gradient(circle, rgb(20, 19, 59) 0%, rgba(2, 0, 36, 1) 94%, rgba(2, 0, 36, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#14133b", endColorstr="#020024", GradientType=1);
     justify-content: center;
+    overscroll-behavior: none;
+    overflow-x: hidden;
 
     main {
       align-items: center;
@@ -21,12 +23,10 @@
         padding: 25px 10px;
 
         @media screen and (min-width: 768px) and (max-width: 1024px) {
-          padding: 25px 10px;
           height: auto;
         }
 
         @media screen and (min-width: 1024px) {
-          padding: 25px 10px;
           width: 60em;
         height: 100dvh;
         }
