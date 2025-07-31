@@ -13,23 +13,30 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
 
+ 
   useEffect(() => {
-
-    const timer = setTimeout(() => {
+    const handleLoad = () => {
       setIsLoading(false);
-    }, 1800);
+    };
 
+    // Verifica si ya cargó, por si el efecto entra tarde
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
 
-    return () => clearTimeout(timer);
+    // Limpieza del evento
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
   }, []);
 
   return (
     <>
       {isLoading ? (
-
         <Loader />
       ) : (
-
         <>
           <Header />
           <main>
@@ -43,6 +50,7 @@ function App() {
       )}
     </>
   );
-}
+};
+
 
 export default App;
