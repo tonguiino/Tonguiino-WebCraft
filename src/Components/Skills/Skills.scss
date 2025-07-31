@@ -17,13 +17,11 @@ section.skills {
 
 
         .skills-box-square-info {
-            /* Ajusta el ancho al 100% del contenedor */
             max-width: 400px;
-            /* Limita el ancho máximo */
             height: 250px;
-            /* Ajusta la altura automáticamente según el contenido */
-            background-color: rgba(240, 248, 255, 0.412);
+            background-color: #0c122a;
             border-radius: 20px;
+            border: 1px solid #1f2444;
             padding: 15px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
