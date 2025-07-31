@@ -24,7 +24,7 @@ const Home = () => {
             duration: 2, //duracion
             ease: "power4.out", //efecto 
             scrollTrigger: {
-                trigger: homeRef.current,
+                trigger: homeRef.current, //a quien le vas a dar este efecto
                 start: "top 80%", // Cuando el top del elemento llegue al 80% del viewport
                 toggleActions: "play none none none" // play cuando entra
 

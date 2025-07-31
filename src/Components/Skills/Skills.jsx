@@ -9,10 +9,33 @@ import gitImg from "../../assets/img/Git_logo.png"
 import gitHubImg from "../../assets/img/GitHubLogo.svg"
 import visualCodeImg from "../../assets/img/Vscode_logo.png"
 import npmImg from "../../assets/img/npm_logo.png"
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
+    const skillRef = useRef();
+
+    useGSAP(() => {
+        gsap.from(skillRef.current, {
+            y: 100,
+            opacity: 0,
+            duration: 2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: skillRef.current,
+                start: 'top 80%',
+                scrub: true,
+                toggleActions: 'play none none none'
+            }
+        })
+        
+    })
+
     return (
-        <section className="skills" id="skills">
+        <section className="skills" id="skills" ref={skillRef} >
             <div className="skills-info">
                 <h2><span className="material-symbols-outlined">person_play</span> Habilidades</h2>
                 <p>A continuación, podrán ver las tecnologías y herramientas que manejo actualmente y en las que estoy en constante aprendizaje y evolución. Mi pasión por el desarrollo me impulsa a aprender y perfeccionar continuamente mis habilidades, asegurando que pueda ofrecer lo mejor en cada proyecto que emprendo.</p>
@@ -23,11 +46,11 @@ const Skills = () => {
                         <h2>Tecnologías</h2>
                     </div>
                     <div className="skills-box-square-info">
-                        <img src={htmlImg} alt="Logo html" title="Logo html"/>
-                        <img src={cssImg} alt="Logo Css" title="Logo Css"/>
-                        <img src={jsImg} alt="Logo Javascript" title="Logo Javascript"/>
-                        <img src={reactImg} alt="Logo React" title="Logo React"/>
-                        <img src={sassImg} alt="Logo Sass" title="Logo Sass"/>
+                        <img src={htmlImg} alt="Logo html" title="Logo html" />
+                        <img src={cssImg} alt="Logo Css" title="Logo Css" />
+                        <img src={jsImg} alt="Logo Javascript" title="Logo Javascript" />
+                        <img src={reactImg} alt="Logo React" title="Logo React" />
+                        <img src={sassImg} alt="Logo Sass" title="Logo Sass" />
                         <img src={wordPressImg} alt="Logo WordPreds" title="Logo WordPreds" />
                     </div>
                 </div>
