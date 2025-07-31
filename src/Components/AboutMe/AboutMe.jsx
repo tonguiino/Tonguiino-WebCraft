@@ -1,5 +1,5 @@
 import "./AboutMe.scss"
-import AboutUSImg from "../../assets/img/Santiago_Tonguino.webp"
+import AboutUSImg from "../../assets/img/Santiago_picture.png"
 
 
 const AboutMe = () => {
