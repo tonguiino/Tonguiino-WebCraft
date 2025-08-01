@@ -12,8 +12,7 @@ import npmImg from "../../assets/img/npm_logo.png"
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+
 
 const Skills = () => {
     const skillRef = useRef();
@@ -22,14 +21,14 @@ const Skills = () => {
         gsap.from(skillRef.current, {
             y: 100,
             opacity: 0,
-            duration: 2,
+            duration: 1,
             ease: "power3.out",
             scrollTrigger: {
                 trigger: skillRef.current,
                 start: 'top 80%',
                 scrub: true,
                 toggleActions: 'play none none none'
-            }
+            }   
         })
         
     })

@@ -1,11 +1,32 @@
 import "./AboutMe.scss"
 import AboutUSImg from "../../assets/img/Santiago_picture.png"
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import { useRef } from "react";
 
 
 const AboutMe = () => {
+
+    const aboutMeRef = useRef();
+
+    useGSAP(() => {
+        gsap.from(aboutMeRef.current, {
+            y: 100,
+            opacity: 0,
+            duration: 2,
+            ease: "power3.in",
+            scrollTrigger: {
+                trigger: aboutMeRef.current,
+                start: 'top 80%',
+                scrub: true,
+                toggleActions: "play none none none"
+            }
+        })
+    })
     return (
 
-        <section className="AboutMe" id="AboutMe">
+        <section className="AboutMe" id="AboutMe" ref={aboutMeRef} >
             <div className="card">
                 <img src={AboutUSImg} alt="" />
             </div>

@@ -3,9 +3,7 @@ import profileImage from "../../assets/img/FotoPerfilSantiagoTonguino.jpg"
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const Button = ({ text }) => {
     return (

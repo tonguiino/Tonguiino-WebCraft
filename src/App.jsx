@@ -8,12 +8,13 @@ import Skills from "./Components/Skills/Skills";
 import Footer from "./Components/Footer/Footer";
 import Loader from "./Components/Loader/Loader";
 
+
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
 
 
- 
+
   useEffect(() => {
     const handleLoad = () => {
       setIsLoading(false);
