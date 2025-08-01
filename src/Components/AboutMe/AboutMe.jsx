@@ -14,13 +14,13 @@ const AboutMe = () => {
         gsap.from(aboutMeRef.current, {
             y: 100,
             opacity: 0,
-            duration: 2,
-            ease: "power3.in",
+            duration: 1,
+            ease: "power3.out",
             scrollTrigger: {
                 trigger: aboutMeRef.current,
                 start: 'top 80%',
-                scrub: true,
-                toggleActions: "play none none none"
+                scrub: 1,
+                toggleActions: 'play none none none'
             }
         })
     })
