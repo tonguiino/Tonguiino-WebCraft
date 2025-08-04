@@ -13,7 +13,7 @@ const Card = ({ title, tech, info, img, link, nameBtn }) => {
                         <img src={img} alt="" />
                     </div>
                 </div>
-                <a className="card-btn" href={link || '#'}>{nameBtn || 'boton defecto'}</a>
+                <a className="card-btn" href={link || '#'} target="_blank" >{nameBtn || 'Ver Repositorio'}</a>
             </article>
         </>
     )
