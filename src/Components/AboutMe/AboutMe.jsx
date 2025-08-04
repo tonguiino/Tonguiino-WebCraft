@@ -2,7 +2,6 @@ import "./AboutMe.scss"
 import AboutUSImg from "../../assets/img/Santiago_picture.png"
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-
 import { useRef } from "react";
 
 

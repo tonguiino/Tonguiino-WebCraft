@@ -28,9 +28,9 @@ const Skills = () => {
                 start: 'top 80%',
                 scrub: true,
                 toggleActions: 'play none none none'
-            }   
+            }
         })
-        
+
     })
 
     return (
