@@ -1,5 +1,5 @@
 import "./card.scss"
-const Card = ({ title, tech, info, img, link, nameBtn }) => {
+const Card = ({ title, tech, info, link, nameBtn }) => {
     return (
         <>
             <article className="card-container">
@@ -8,9 +8,6 @@ const Card = ({ title, tech, info, img, link, nameBtn }) => {
                     <div className="card-info-text">
                         <h3>{tech || 'Tecnologias utilizadas'}</h3>
                         <p>{info || 'Parrafo por defecto, mona mointa nom  fncoefire asddsd oeiofnwejfned wef we dpfwienf fgh qpohfnow  pasr comer salchichas de limosn atun y ajos en latas '}</p>
-                    </div>
-                    <div className="card-info-img">
-                        <img src={img} alt="" />
                     </div>
                 </div>
                 <a className="card-btn" href={link || '#'} target="_blank" >{nameBtn || 'Ver Repositorio'}</a>
