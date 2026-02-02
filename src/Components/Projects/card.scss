@@ -17,8 +17,12 @@
         background-color: #ffff;
         color: black;
         border-radius: 50px;
+        border: none;
         padding: 10px;
         align-self: start;
 
+        &:hover {
+            background-color: #40c9ff;
+        }
     }
 }
