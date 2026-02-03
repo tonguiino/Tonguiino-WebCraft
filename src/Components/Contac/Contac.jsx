@@ -1,7 +1,14 @@
+import { useRevealOnScroll } from "../../hooks/useRevealOnScroll"
 import "./Contac.scss"
+import { useRef } from "react"
+
 const Contac = () => {
+
+    const contacRef = useRef()
+    useRevealOnScroll(contacRef)
+
     return (
-        <section className="Contac" id="Contac">
+        <section className="Contac" id="Contac" ref={contacRef}>
             <div className="contac-Container">
                 <div className="contact-info">
                     <h2><span className="material-symbols-outlined">forward_to_inbox</span> Contactame</h2>

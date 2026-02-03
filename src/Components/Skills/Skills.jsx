@@ -9,29 +9,14 @@ import gitImg from "../../assets/img/Git_logo.png"
 import gitHubImg from "../../assets/img/GitHubLogo.svg"
 import visualCodeImg from "../../assets/img/Vscode_logo.png"
 import npmImg from "../../assets/img/npm_logo.png"
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 import { useRef } from "react"
+import { useRevealOnScroll } from "../../hooks/useRevealOnScroll"
 
 
 const Skills = () => {
     const skillRef = useRef();
 
-    useGSAP(() => {
-        gsap.from(skillRef.current, {
-            y: 100,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: skillRef.current,
-                start: 'top 80%',
-                scrub: true,
-                toggleActions: 'play none none none'
-            }
-        })
-
-    })
+    useRevealOnScroll(skillRef)
 
     return (
         <section className="skills" id="skills" ref={skillRef} >

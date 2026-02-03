@@ -1,7 +1,7 @@
 import "./Home.scss"
 import profileImage from "../../assets/img/FotoPerfilSantiagoTonguino.jpg"
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 
 
