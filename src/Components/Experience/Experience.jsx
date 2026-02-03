@@ -1,3 +1,4 @@
+import "./Experience.scss"
 import { useRevealOnScroll } from "../../hooks/useRevealOnScroll"
 import { useRef } from 'react'
 import Box from '@mui/material/Box';
@@ -14,9 +15,11 @@ const Experience = () => {
     useRevealOnScroll(experienceRef)
 
     return (
-        <section ref={experienceRef} >
+        <section ref={experienceRef} className='experience' >
             <Box>
-                <Grid container spacing={2}>
+                <Grid container spacing={2}
+
+                >
                     <Grid size={8}>
                         <Box sx={{ height: '100%', boxSizing: 'border-box' }}>
                             <h2>Experiencia laboral</h2>
