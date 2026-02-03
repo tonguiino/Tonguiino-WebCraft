@@ -5,12 +5,6 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 
 
-const Button = ({ text }) => {
-    return (
-        <button>{text}</button>
-    )
-}
-
 const Home = () => {
     const homeRef = useRef();
 
@@ -46,8 +40,9 @@ const Home = () => {
                     Mi dominio abarca las tecnologías esenciales como HTML5, CSS, JavaScript, React, Sass, WordlPress,
                     PHP y SQL server.</p>
                 <div className="prodfile-info-button animado">
-                    <Button text={<a href="https://drive.google.com/file/d/1YbLPll2FqawjixDK6CVL53jcUcTSNcJY/view" target="_blank">Visita mi cv</a>} />
-                    <Button text={<a href="https://www.linkedin.com/in/santiago-tonguino-quiceno-41a44b167/" target="_blank" >LinkedIn</a>} />
+                    <button onClick={()=>window.open('https://drive.google.com/file/d/1YbLPll2FqawjixDK6CVL53jcUcTSNcJY/view', '_blank') } >Conoce mi CV</button>
+                    {/* <Button text={<a href="https://drive.google.com/file/d/1YbLPll2FqawjixDK6CVL53jcUcTSNcJY/view" target="_blank">Visita mi cv</a>} />
+                    <Button text={<a href="https://www.linkedin.com/in/santiago-tonguino-quiceno-41a44b167/" target="_blank" >LinkedIn</a>} /> */}
                 </div>
             </div>
         </section>
