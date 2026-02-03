@@ -10,11 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@gsap/react": "^2.1.2",
+    "@mui/material": "^7.3.7",
+    "@tailwindcss/vite": "^4.1.18",
     "gsap": "^3.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
