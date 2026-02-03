@@ -28,7 +28,7 @@ const Home = () => {
 
             }
         });
-    }, []);
+    }, { scope: homeRef });
 
 
     return (
