@@ -8,6 +8,7 @@ import Skills from "./Components/Skills/Skills";
 import Footer from "./Components/Footer/Footer";
 import Loader from "./Components/Loader/Loader";
 import Projects from "./Components/Projects/projects";
+import Experience from "./Components/Experience/Experience";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Header />
           <main>
             <Home />
+            <Experience/>
             <Skills />
             <Projects />
             <AboutMe />
