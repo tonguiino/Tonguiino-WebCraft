@@ -1,27 +1,15 @@
+import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
 import Card from "./card";
 import "./projects.scss"
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+
 
 const Projects = () => {
 
     const projects = useRef();
 
-    useGSAP(() => {
-        gsap.from(projects.current, {
-            y: 100,
-            opacity: 0,
-            duration: 1,
-            ease: 'power3.Out',
-            scrollTrigger: {
-                trigger: projects.current,
-                start: 'top 80%',
-                scrub: 1,
-                toggleActions: 'play none none none'
-            }
-        })
-    })
+    useRevealOnScroll(projects)
+
 
     return (
 
