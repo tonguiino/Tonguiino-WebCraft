@@ -1,57 +1,77 @@
-import "./Skills.scss"
-import htmlImg from "../../assets/img/html5_logo.png"
-import cssImg from "../../assets/img/CSS3_logo.png"
-import jsImg from "../../assets/img/Js_logo.png"
-import reactImg from "../../assets/img/React_logo.png"
-import sassImg from "../../assets/img/Sass_logo.png"
-import wordPressImg from "../../assets/img/wordPress_logo.png"
-import gitImg from "../../assets/img/Git_logo.png"
-import gitHubImg from "../../assets/img/GitHubLogo.svg"
-import visualCodeImg from "../../assets/img/Vscode_logo.png"
-import npmImg from "../../assets/img/npm_logo.png"
-import { useRef } from "react"
-import { useRevealOnScroll } from "../../hooks/useRevealOnScroll"
-
+import { useRef, useState } from "react";
+import "./Skills.scss";
+import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
 
 const Skills = () => {
     const skillRef = useRef();
+    useRevealOnScroll(skillRef);
 
-    useRevealOnScroll(skillRef)
+    const skillsData = [
+        { name: "HTML5", icon: "devicon-html5-plain", category: "tecnologia" },
+        { name: "JavaScript", icon: "devicon-javascript-plain", category: "tecnologia" },
+        { name: "LARAVEL", icon: "devicon-laravel-original colored", category: "herramienta" },
+        { name: "React", icon: "devicon-react-original", category: "tecnologia" },
+        { name: "DOCKER", icon: "devicon-docker-plain colored", category: "tecnologia" },
+        { name: "Next.js", icon: "devicon-nextjs-original-wordmark", category: "tecnologia" },
+        { name: "CSS3", icon: "devicon-css3-plain", category: "tecnologia" },
+        { name: "TYPESCRIPT", icon: "devicon-typescript-plain colored", category: "herramienta" },
+        { name: "PHP", icon: "devicon-php-plain colored", category: "herramienta" },
+        { name: "TAILWIND", icon: "devicon-tailwindcss-original colored", category: "herramienta" },
+        { name: "Sass", icon: "devicon-sass-original", category: "tecnologia" },
+        { name: "MATERIAL MUI", icon: "devicon-materialui-plain colored", category: "herramienta" },
+        { name: "WordPress", icon: "devicon-wordpress-plain", category: "tecnologia" },
+        { name: "NODE.JS", icon: "devicon-nodejs-plain colored", category: "herramienta" },
+        { name: "MYSQL", icon: "devicon-mysql-original", category: "herramienta" },
+        { name: "NGINX", icon: "devicon-nginx-original", category: "herramienta" },
+        { name: "UBUNTU", icon: "devicon-ubuntu-plain colored", category: "herramienta" },
+        { name: "VS Code", icon: "devicon-vscode-plain", category: "herramienta" },
+        { name: "GitHub", icon: "devicon-github-original", category: "herramienta" },
+        { name: "Git", icon: "devicon-git-plain", category: "herramienta" },
+        { name: "NPM", icon: "devicon-npm-original-wordmark", category: "herramienta" },
+        { name: "PNPM", icon: "devicon-pnpm-plain-wordmark colored", category: "herramienta" },
+
+    ];
+
+    const [filter, setFilter] = useState("todos");
+
+    const filteredSkills = filter === "todos"
+        ? skillsData
+        : skillsData.filter(s => s.category === filter);
 
     return (
-        <section className="skills" id="skills" ref={skillRef} >
+        <section className="skills" id="skills" ref={skillRef}>
             <div className="skills-info">
                 <h2><span className="material-symbols-outlined">person_play</span> Habilidades</h2>
-                <p>A continuación, podrán ver las tecnologías y herramientas que manejo actualmente y en las que estoy en constante aprendizaje y evolución. Mi pasión por el desarrollo me impulsa a aprender y perfeccionar continuamente mis habilidades, asegurando que pueda ofrecer lo mejor en cada proyecto que emprendo.</p>
+                <p>Explora las tecnologías y herramientas que utilizo para construir soluciones digitales sólidas y modernas.</p>
             </div>
-            <div className="skills-box">
-                <div className="skills-box-square">
-                    <div className="skills-box-square-tittle">
-                        <h2>Tecnologías</h2>
+
+            <div className="skills-filters">
+                <button
+                    onClick={() => setFilter("todos")}
+                    className={filter === "todos" ? "active" : ""}
+                >Todos</button>
+                <button
+                    onClick={() => setFilter("tecnologia")}
+                    className={filter === "tecnologia" ? "active" : ""}
+                >Frontend</button>
+                <button
+                    onClick={() => setFilter("herramienta")}
+                    className={filter === "herramienta" ? "active" : ""}
+                >DevOps & tools</button>
+            </div>
+
+            <div className="skills-grid">
+                {filteredSkills.map((skill, index) => (
+                    <div className="skill-card" key={index}>
+                        <div className="icon-box">
+                            <i className={`${skill.icon} colored`}></i>
+                        </div>
+                        <span>{skill.name}</span>
                     </div>
-                    <div className="skills-box-square-info">
-                        <img src={htmlImg} alt="Logo html" title="Logo html" />
-                        <img src={cssImg} alt="Logo Css" title="Logo Css" />
-                        <img src={jsImg} alt="Logo Javascript" title="Logo Javascript" />
-                        <img src={reactImg} alt="Logo React" title="Logo React" />
-                        <img src={sassImg} alt="Logo Sass" title="Logo Sass" />
-                        <img src={wordPressImg} alt="Logo WordPreds" title="Logo WordPreds" />
-                    </div>
-                </div>
-                <div className="skills-box-square">
-                    <div className="skills-box-square-tittle">
-                        <h2>Herramientas</h2>
-                    </div>
-                    <div className="skills-box-square-info">
-                        <img src={visualCodeImg} alt="Logo Visual Studio" title="Logo Visual Studio" />
-                        <img src={gitHubImg} alt="Logo Github" title="Logo Github" />
-                        <img src={gitImg} alt="Logo git" title="Logo git" />
-                        <img src={npmImg} alt="Logo npm" title="Logo npm" />
-                    </div>
-                </div>
+                ))}
             </div>
         </section>
+    );
+};
 
-    )
-}
-export default Skills
+export default Skills;

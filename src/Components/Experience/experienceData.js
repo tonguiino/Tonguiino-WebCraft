@@ -5,7 +5,7 @@ export const experienceData = [
     company: "Giro Informatico",
     time: "ago. 2025 - ene. 2026 · 6 meses",
     location: "Medellin - Presencial",
-    description: " hola pinocho ",
+    description: "Desarrollo completo y autónomo de una plataforma web, cubriendo todas las fases desde la concepción hasta la implementación de backend, frontend e infraestructura.",
   },
 //   {
 //     id: 2,

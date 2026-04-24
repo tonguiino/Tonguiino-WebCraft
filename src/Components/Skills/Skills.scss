@@ -1,147 +1,132 @@
-section.skills {
+$bg-dark: #05051a; // Tu fondo actual
+$blue-bright: #3b82f6;
+$text-dim: #94a3b8;
+$card-glass: rgba(255, 255, 255, 0.03);
 
+.skills {
+    padding: 100px 20px;
+    background-color: $bg-dark;
+    color: white;
 
     .skills-info {
-        & * {
-            margin: 18px 0px;
-        }
-
-    }
-
-    .skills-box-square {
-
-        & * {
-            margin: 18px 0px;
-        }
-
-
-
-        .skills-box-square-info {
-            max-width: 400px;
-            height: 250px;
-            background-color: #0c122a;
-            border-radius: 20px;
-            border: 1px solid #1f2444;
-            padding: 15px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            justify-items: center;
-            align-items: center;
-        }
-
-    }
-
-    @media screen and (min-width: 768px) {
-        .skills-box {
+        text-align: center;
+        margin-bottom: 60px;
+        h2 {
+            font-size: 2.8rem;
             display: flex;
-            justify-content: space-around;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            span { font-size: 3rem; color: $blue-bright; }
+        }
+        p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: $text-dim;
+            line-height: 1.6;
+        }
+    }
 
-            .skills-box-square {
-                width: 350px;
+    .skills-filters {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 50px;
+
+        button {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: $text-dim;
+            padding: 10px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: auto;
+
+            &:hover {
+                border-color: white;
+                color: white;
+            }
+
+            &.active {
+                background: $blue-bright;
+                border-color: $blue-bright;
+                color: white;
+                box-shadow: 0 0 20px rgba($blue-bright, 0.4);
+            }
+        }
+    }
+
+    .skills-grid {
+        display: grid;
+        // Se adapta solo al ancho de pantalla
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 25px;
+        max-width: 1100px;
+        margin: 0 auto;
+
+        .skill-card {
+            background: $card-glass;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+
+            .icon-box {
+                i {
+                    font-size: 3.5rem; // Tamaño del icono
+                    filter: grayscale(100%); // Gris por defecto
+                    transition: all 0.4s ease;
+                    opacity: 0.7;
+                }
+            }
+
+            span {
+                font-size: 0.85rem;
+                font-weight: 700;
+                color: $text-dim;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+                border-color: rgba($blue-bright, 0.5);
+                background: rgba(255, 255, 255, 0.06);
+                box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+
+                .icon-box i {
+                    filter: grayscale(0%); // Recupera su color original
+                    opacity: 1;
+                    transform: scale(1.1);
+                }
+
+                span {
+                    color: white;
+                }
             }
         }
     }
 }
 
+// Adaptación para tablets y móviles
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-
-
-
-// section.skills {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     height: auto; /* Ajusta la altura automáticamente según el contenido */
-//     padding: 20px; /* Añade padding para asegurar que el contenido no toque los bordes */
-
-//     .skills-info {
-//         text-align: center; /* Centra el texto dentro de .skills-info */
-//         padding: 0 15px; /* Añade padding a los lados para que el contenido no toque los bordes */
-//         h2 {
-//             text-align: center;
-//             margin-bottom: 18px;
-//         }
-
-//         p {
-//  /* Ajusta el ancho al 100% del contenedor */
-//             max-width: 643px; /* Limita el ancho máximo */
-//             text-align: justify;
-//             margin-bottom: 60px;
-//         }
-//     }
-
-//     .skills-box {
-//         display: flex;
-//         flex-wrap: wrap; /* Permite que los elementos se ajusten y envuelvan */
-//         justify-content: center; /* Centra los elementos en el contenedor */
-//         width: 100%; /* Ajusta el ancho al 100% del contenedor */
-//         max-width: 65em; /* Limita el ancho máximo */
-//         height: auto; /* Ajusta la altura automáticamente según el contenido */
-
-//         .skills-box-square {
-//             width: 100%; /* Ajusta el ancho al 100% del contenedor */
-//             max-width: 25em; /* Limita el ancho máximo */
-//             height: auto; /* Ajusta la altura automáticamente según el contenido */
-//             margin: 10px; /* Añade margen para espaciar los elementos */
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             gap: 20px;
-
-//             .skills-box-square-info {
-//                 width: 100%; /* Ajusta el ancho al 100% del contenedor */
-//                 max-width: 400px; /* Limita el ancho máximo */
-//                 height: 250px; /* Ajusta la altura automáticamente según el contenido */
-//                 background-color: rgba(240, 248, 255, 0.412);
-//                 border-radius: 20px;
-//                 padding: 15px;
-//                 display: grid;
-//                 grid-template-columns: 1fr 1fr 1fr;
-//                 grid-template-rows: 1fr 1fr;
-//                 justify-items: center;
-//                 align-items: center;
-
-//                 img {
-//                     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
-
-//                     &:hover {
-//                         transform: scale(1.2);
-//                         transition: transform 0.2s ease-in-out;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// /* Media Queries para pantallas más pequeñas */
-// @media (max-width: 768px) {
-//     .skills-box {
-//         flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-//         align-items: center; /* Alinea los elementos al centro */
-//     }
-
-//     .skills-box-square {
-//         width: 100%; /* Ajusta el ancho al 100% del contenedor */
-//         margin: 10px 0; /* Añade margen vertical para espaciar los elementos */
-//     }
-
-//     .skills-box-square-info {
-//         grid-template-columns: 1fr 1fr; /* Cambia el layout de grid a 2 columnas */
-//         grid-template-rows: auto; /* Ajusta las filas automáticamente */
-//     }
-// }
-
-// @media (max-width: 480px) {
-//     .skills-info p {
-//  /* Ajusta el ancho al 100% del contenedor */
-//         margin-bottom: 30px; /* Ajusta el margen inferior */
-//     }
-
-//     .skills-box-square-info {
-//         grid-template-columns: 1fr; /* Cambia el layout de grid a 1 columna */
-//         grid-template-rows: auto; /* Ajusta las filas automáticamente */
-//     }
-// }
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skills-info h2 { font-size: 2rem; }
+}
