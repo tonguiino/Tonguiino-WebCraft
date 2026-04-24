@@ -10,16 +10,30 @@ const Home = () => {
 
     // Efectos usados con gsap 
     useGSAP(() => {
-        gsap.from(homeRef.current, {
-            y: 100, //desplazamiento
-            opacity: 0, //opacidad
-            duration: 2, //duracion
-            ease: "power4.out", //efecto 
+        // Tarjeta entrando por la izquierda
+        gsap.from(".profile-img", {
+            x: -100,
+            opacity: 0,
+            duration: 1.5,
+            ease: "power3.out",
             scrollTrigger: {
-                trigger: homeRef.current, //a quien le vas a dar este efecto
-                start: "top 80%", // Cuando el top del elemento llegue al 80% del viewport
-                toggleActions: "play none none none" // play cuando entra
+                trigger: homeRef.current,
+                start: "top 80%",
+                toggleActions: "play reverse play reverse"
+            }
+        });
 
+        // Textos y botones entrando por la derecha en cascada (stagger)
+        gsap.from(".profile-info > *", {
+            x: 100,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: homeRef.current,
+                start: "top 80%",
+                toggleActions: "play reverse play reverse"
             }
         });
     }, { scope: homeRef });

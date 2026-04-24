@@ -1,27 +1,33 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./Skills.scss";
 import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Skills = () => {
     const skillRef = useRef();
-    useRevealOnScroll(skillRef);
+    useRevealOnScroll(skillRef, {
+        selector: ".skills-info, .skills-filters, .skill-card",
+        y: 50,
+        stagger: 0.05,
+        ease: "back.out(1.5)"
+    });
 
     const skillsData = [
-        { name: "HTML5", icon: "devicon-html5-plain", category: "tecnologia" },
-        { name: "JavaScript", icon: "devicon-javascript-plain", category: "tecnologia" },
-        { name: "LARAVEL", icon: "devicon-laravel-original colored", category: "herramienta" },
-        { name: "React", icon: "devicon-react-original", category: "tecnologia" },
-        { name: "DOCKER", icon: "devicon-docker-plain colored", category: "tecnologia" },
-        { name: "Next.js", icon: "devicon-nextjs-original-wordmark", category: "tecnologia" },
-        { name: "CSS3", icon: "devicon-css3-plain", category: "tecnologia" },
-        { name: "TYPESCRIPT", icon: "devicon-typescript-plain colored", category: "herramienta" },
-        { name: "PHP", icon: "devicon-php-plain colored", category: "herramienta" },
-        { name: "TAILWIND", icon: "devicon-tailwindcss-original colored", category: "herramienta" },
-        { name: "Sass", icon: "devicon-sass-original", category: "tecnologia" },
-        { name: "MATERIAL MUI", icon: "devicon-materialui-plain colored", category: "herramienta" },
-        { name: "WordPress", icon: "devicon-wordpress-plain", category: "tecnologia" },
-        { name: "NODE.JS", icon: "devicon-nodejs-plain colored", category: "herramienta" },
-        { name: "MYSQL", icon: "devicon-mysql-original", category: "herramienta" },
+        { name: "HTML5", icon: "devicon-html5-plain", category: "frontend" },
+        { name: "JavaScript", icon: "devicon-javascript-plain", category: "frontend" },
+        { name: "LARAVEL", icon: "devicon-laravel-original colored", category: "backend" },
+        { name: "React", icon: "devicon-react-original", category: "frontend" },
+        { name: "DOCKER", icon: "devicon-docker-plain colored", category: "herramienta" },
+        { name: "Next.js", icon: "devicon-nextjs-original-wordmark", category: "frontend" },
+        { name: "CSS3", icon: "devicon-css3-plain", category: "frontend" },
+        { name: "TYPESCRIPT", icon: "devicon-typescript-plain colored", category: "frontend" },
+        { name: "PHP", icon: "devicon-php-plain colored", category: "backend" },
+        { name: "TAILWIND", icon: "devicon-tailwindcss-original colored", category: "frontend" },
+        { name: "Sass", icon: "devicon-sass-original", category: "frontend" },
+        { name: "MATERIAL MUI", icon: "devicon-materialui-plain colored", category: "frontend" },
+        { name: "WordPress", icon: "devicon-wordpress-plain", category: "frontend" },
+        { name: "NODE.JS", icon: "devicon-nodejs-plain colored", category: "backend" },
+        { name: "MYSQL", icon: "devicon-mysql-original", category: "backend" },
         { name: "NGINX", icon: "devicon-nginx-original", category: "herramienta" },
         { name: "UBUNTU", icon: "devicon-ubuntu-plain colored", category: "herramienta" },
         { name: "VS Code", icon: "devicon-vscode-plain", category: "herramienta" },
@@ -29,6 +35,8 @@ const Skills = () => {
         { name: "Git", icon: "devicon-git-plain", category: "herramienta" },
         { name: "NPM", icon: "devicon-npm-original-wordmark", category: "herramienta" },
         { name: "PNPM", icon: "devicon-pnpm-plain-wordmark colored", category: "herramienta" },
+        { name: "POSTGRESQL", icon: "devicon-postgresql-plain colored", category: "backend" },
+        { name: "LINUX", icon: "devicon-linux-plain", category: "herramienta" },
 
     ];
 
@@ -37,6 +45,14 @@ const Skills = () => {
     const filteredSkills = filter === "todos"
         ? skillsData
         : skillsData.filter(s => s.category === filter);
+
+    // Refresh ScrollTriggers when DOM height changes due to filtering
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 150);
+        return () => clearTimeout(timeoutId);
+    }, [filter]);
 
     return (
         <section className="skills" id="skills" ref={skillRef}>
@@ -51,9 +67,13 @@ const Skills = () => {
                     className={filter === "todos" ? "active" : ""}
                 >Todos</button>
                 <button
-                    onClick={() => setFilter("tecnologia")}
-                    className={filter === "tecnologia" ? "active" : ""}
+                    onClick={() => setFilter("frontend")}
+                    className={filter === "frontend" ? "active" : ""}
                 >Frontend</button>
+                <button
+                    onClick={() => setFilter("backend")}
+                    className={filter === "backend" ? "active" : ""}
+                >Backend & Databases</button>
                 <button
                     onClick={() => setFilter("herramienta")}
                     className={filter === "herramienta" ? "active" : ""}

@@ -7,8 +7,11 @@ import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
 const AboutMe = () => {
 
     const aboutMeRef = useRef();
-
-    useRevealOnScroll(aboutMeRef)
+    useRevealOnScroll(aboutMeRef, {
+        selector: ".card, .aboutMe-info > *",
+        y: 40,
+        stagger: 0.15
+    });
 
     return (
 

@@ -7,8 +7,11 @@ import { useRef } from "react";
 const Projects = () => {
 
     const projects = useRef();
-
-    useRevealOnScroll(projects)
+    useRevealOnScroll(projects, {
+        selector: "h2, article",
+        y: 60,
+        stagger: 0.2
+    });
 
 
     return (
