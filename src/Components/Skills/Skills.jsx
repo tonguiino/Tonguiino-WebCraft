@@ -1,10 +1,16 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./Skills.scss";
 import { useRevealOnScroll } from "../../hooks/useRevealOnScroll";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Skills = () => {
     const skillRef = useRef();
-    useRevealOnScroll(skillRef);
+    useRevealOnScroll(skillRef, {
+        selector: ".skills-info, .skills-filters, .skill-card",
+        y: 50,
+        stagger: 0.05,
+        ease: "back.out(1.5)"
+    });
 
     const skillsData = [
         { name: "HTML5", icon: "devicon-html5-plain", category: "frontend" },
@@ -39,6 +45,14 @@ const Skills = () => {
     const filteredSkills = filter === "todos"
         ? skillsData
         : skillsData.filter(s => s.category === filter);
+
+    // Refresh ScrollTriggers when DOM height changes due to filtering
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 150);
+        return () => clearTimeout(timeoutId);
+    }, [filter]);
 
     return (
         <section className="skills" id="skills" ref={skillRef}>

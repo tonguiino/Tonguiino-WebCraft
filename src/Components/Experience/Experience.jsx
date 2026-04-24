@@ -12,7 +12,11 @@ import { experienceData } from "./experienceData";
 const Experience = () => {
 
     const experienceRef = useRef()
-    useRevealOnScroll(experienceRef)
+    useRevealOnScroll(experienceRef, {
+        selector: "h2, p, .MuiCard-root",
+        y: 50,
+        stagger: 0.15
+    });
 
     return (
         <section ref={experienceRef} className='experience' >

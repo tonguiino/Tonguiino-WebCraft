@@ -5,7 +5,12 @@ import { useRef } from "react"
 const Contac = () => {
 
     const contacRef = useRef()
-    useRevealOnScroll(contacRef)
+    useRevealOnScroll(contacRef, {
+        selector: ".contact-info > *, .contac-nav > button, .contac-terminal-loader-container",
+        y: 50,
+        stagger: 0.1,
+        ease: "power2.out"
+    });
 
     return (
         <section className="Contac" id="Contac" ref={contacRef}>
