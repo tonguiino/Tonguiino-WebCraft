@@ -2,6 +2,7 @@ section.home {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     // flex-wrap: wrap;
 
     .profile-img {
@@ -12,8 +13,8 @@ section.home {
             border-radius: 5px;
         }
 
-        .profile-info{
-            h1{
+        .profile-info {
+            h1 {
                 opacity: 0;
             }
         }
@@ -25,7 +26,7 @@ section.home {
             background-color: #000;
             display: flex;
             flex-direction: column;
-            justify-content: end;
+            justify-content: center;
             padding: 12px;
             gap: 12px;
             border-radius: 8px;
@@ -94,7 +95,7 @@ section.home {
         }
     }
 
-    @media screen and (min-width: 768px)  and (max-width: 1024px) {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
 
         .prodfile-info-button {
             display: flex;
@@ -104,7 +105,7 @@ section.home {
 
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1024px) {
 
         .prodfile-info-button {
             display: flex;
