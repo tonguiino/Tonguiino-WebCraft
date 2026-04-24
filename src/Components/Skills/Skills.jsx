@@ -30,7 +30,7 @@ const Skills = () => {
         { name: "NPM", icon: "devicon-npm-original-wordmark", category: "herramienta" },
         { name: "PNPM", icon: "devicon-pnpm-plain-wordmark colored", category: "herramienta" },
         { name: "POSTGRESQL", icon: "devicon-postgresql-plain colored", category: "backend" },
-        { name: "LARAVEL", icon: "devicon-laravel-original colored", category: "backend" },
+        { name: "LINUX", icon: "devicon-linux-plain", category: "herramienta" },
 
     ];
 

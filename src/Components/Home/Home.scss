@@ -80,14 +80,18 @@ section.home {
 
     .prodfile-info-button {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
         margin-top: 17px;
+
+        button {
+            width: 140px;
+        }
 
         a {
             color: #000;
         }
-
-
     }
 
     @media screen and (min-width: 768px)  and (max-width: 1024px) {
