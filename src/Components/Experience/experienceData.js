@@ -23,7 +23,7 @@ export const experienceData = [
     time: "Agosto 2023 - Febrero 2024",
     location: "Presencial",
     description:
-      "Durante este periodo dentro de la empresa, presté mis servicios como auxiliar de IT, donde me encargabaMantenimiento preventivo y correctivo de equipos, soporte técnico, instalación de software, configuración de servidores/switches y participación en ajustes del sitio web.",
+      "Participé en el desarrollo y mantenimiento de interfaces web utilizando React, apoyando la construcción de componentes reutilizables y la implementación de funcionalidades básicas.",
     responsibilities: [
       "Desarrollo de componentes en React",
       "Construcción de formulario y validaciones",
