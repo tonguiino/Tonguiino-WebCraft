@@ -21,7 +21,7 @@ const Experience = () => {
     return (
         <section ref={experienceRef} className='experience' >
             <Box sx={{ flexGrow: 1, p: { xs: 2, md: 4 }, width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <Grid container spacing={5} sx={{ maxWidth: '1000px', width: '100%' }}>
+                <Grid container spacing={{ xs: 2, md: 5 }} sx={{ maxWidth: '1000px', margin: 0, width: '100%' }}>
                     
                     {/* Header Centrado */}
                     <Grid size={{ xs: 12 }}>
