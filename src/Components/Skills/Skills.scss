@@ -128,8 +128,25 @@ $card-glass: rgba(255, 255, 255, 0.03);
 }
 
 @media (max-width: 480px) {
+    .skills {
+        padding: 60px 15px;
+    }
+    
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        
+        .skill-card {
+            padding: 20px 10px;
+            
+            .icon-box i {
+                font-size: 2.5rem;
+            }
+            
+            span {
+                font-size: 0.75rem;
+            }
+        }
     }
     .skills-info h2 { font-size: 2rem; }
 }
